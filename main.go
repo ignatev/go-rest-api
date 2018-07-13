@@ -11,7 +11,7 @@ import (
 func main() {
 	var (
 		addr = flag.String("addr", ":8088", "endpoint address")
-		mongo = flag.String("mongo", "localhost", "mongodb address")
+		mongo = flag.String("mongo", "localhost:27018", "mongodb address")
 	)
 	log.Println("Dialing mongo" , *mongo)
 	db, err := mgo.Dial(*mongo)
